@@ -1,0 +1,179 @@
+/* constantes */
+:root{
+ --corNav:rgb(23, 4, 68);
+}
+/* padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 300vh;
+}
+
+/* header */
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--corNav);
+    height: 10vh;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 2px;
+    margin-left: 32px;
+}
+
+.perfil span{
+    display: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+/* mobile */
+
+.mobile-menu{
+    /*display: none;*/
+    visibility: hidden;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* conteúdo */
+
+main{
+    background: url(/image/bg.png) no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+}
+
+/* footer */
+
+
+
+/* responsividade
+@media (min-width:320px) - smartphones, portrait iPhone, portrait 480x320 phones (Android) 
+@media (min-width:480px) - smartphones, Android phones, landscape iPhone 
+@media (min-width:600px) - portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) 
+@media (min-width:801px) - tablet, landscape iPad, lo-res laptops ands desktops
+@media (min-width:1025px) - big landscape tablets, laptops, and desktops 
+@media (min-width:1281px) - hi-res laptops and desktops
+*/
+
+/* tablet */
+@media(max-width:801px){
+    body{
+        /* tudo que estiver transbordando para fora no eixo x vai ser hidden*/
+        overflow-x: hidden;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 50vw;
+        height: 50vh;
+        border-bottom-left-radius: 10px;
+        background: var(--corNav);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* rotacionar esse conteúdo no eixo x (vai sair da página)*/
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    .perfil span{
+        display: block;
+    }
+
+    .perfil i{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+        visibility: visible;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+/* celular */
+@media(max-width:480px){
+    body{
+        /* tudo que estiver transbordando para fora no eixo x vai ser hidden*/
+        overflow-x: hidden;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 100vw;
+        height: 40vh;
+        border-radius: 0;
+        background: var(--corNav);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* rotacionar esse conteúdo no eixo x (vai sair da página)*/
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    .perfil span{
+        display: block;
+    }
+
+    .perfil i{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+        visibility: visible;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
