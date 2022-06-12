@@ -1,0 +1,322 @@
+/* definir a estilização dos conteúdos que aparecem em todas as páginas (header e footer) */
+/* constantes */
+:root{
+    --corNav:rgb(4, 10, 68);
+    --corFooter: rgb(14, 12, 27);
+   }
+
+/* padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* header */
+
+header nav{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--corNav);
+    height: 10vh;
+}
+
+header .logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+header .nav-list{
+    list-style: none;
+    display: flex;
+}
+
+header .nav-list li{
+    letter-spacing: 2px;
+    margin-left: 32px;
+}
+
+header .perfil span{
+    display: none;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header a:hover{
+    opacity: 0.7;
+}
+
+    /* mobile */
+    .mobile-menu{
+        /*display: none;*/
+        visibility: hidden;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+/* footer */
+
+footer{
+    border-top: 1px solid var(--corFooter);
+    position: static;
+    bottom: 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+footer .footer-top{
+    display: flex;
+}
+
+.footer-top .content h2{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer-top .box{
+    flex-basis: 50%;
+    padding: 20px 30px;
+    position: relative;
+}
+
+/* Quem somos */
+.left .content{
+    margin-top: 15px;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+/* Mais */
+.mid .content ul{
+    margin-top: 15px;
+    list-style: none;
+}
+
+.mid .content li{
+    padding-bottom: 5px;
+}
+
+.mid .content a{
+    color: black;
+    text-decoration: none;
+}
+
+.mid .content a:hover{
+    text-decoration: underline;
+}
+
+/* Contato */
+.right form input, .right form textarea{
+    width: 100%;
+    padding-left: 10px;
+    margin-top:5px;
+    margin-bottom: 10px;
+    background: rgb(236, 236, 236);
+    border: 1px black solid;
+    resize: none;
+}
+
+.right form input{
+    height: 25px;
+}
+
+.right form textarea{
+    padding-top: 2px;
+}
+
+.right form .bttm input{
+    height: 30px;
+    width: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.right form .bttm input:hover{
+    border: 2px black solid;
+    background: rgb(201, 201, 201);
+}
+
+/* Linha do copyright e midias sociais*/
+
+.footer-bot {
+    border-top: 1px var(--corFooter) solid;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer-bot .content, .footer-bot .social{
+    padding: 20px 30px 0 30px;
+}
+
+.footer-bot .logo{
+    padding-top: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.footer-bot .social a{
+    padding: 0 2px;
+}
+
+.footer-bot .social a i{
+    margin-bottom: 10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.5s;
+    background: var(--corFooter);
+    color: rgb(255, 255, 255);
+}
+
+.footer-bot .social a i:hover{
+    background: rgb(51, 47, 47);
+    opacity: 0.8;
+}
+
+/*
+header, main{
+    display: none;
+}
+*/
+
+
+
+
+
+
+/* responsividade
+@media (max-width:320px) - smartphones, portrait iPhone, portrait 480x320 phones (Android) 
+@media (max-width:480px) - smartphones, Android phones, landscape iPhone 
+@media (max-width:600px) - portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) 
+@media (max-width:801px) - tablet, landscape iPad, lo-res laptops ands desktops
+@media (max-width:1025px) - big landscape tablets, laptops, and desktops 
+@media (max-width:1281px) - hi-res laptops and desktops
+*/
+
+/* tablet */
+@media(max-width:801px){
+    body{
+        /* tudo que estiver transbordando para fora no eixo x vai ser hidden*/
+        overflow-x: hidden;
+    }
+
+    /* header */
+    .nav-list{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 50vw;
+        height: 50vh;
+        border-bottom-left-radius: 10px;
+        background: var(--corNav);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* rotacionar esse conteúdo no eixo x (vai sair da página)*/
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    .perfil .profile{
+        display: block;
+    }
+
+    .perfil i{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+        visibility: visible;
+    }
+
+    /* footer */
+    .footer-top{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+/* celular */
+@media(max-width:480px){
+    body{
+        /* tudo que estiver transbordando para fora no eixo x vai ser hidden*/
+        overflow-x: hidden;
+    }
+
+    /* header */
+
+    .nav-list{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 100vw;
+        height: 40vh;
+        border-radius: 0;
+        background: var(--corNav);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* rotacionar esse conteúdo no eixo x (vai sair da página)*/
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    .perfil .profile{
+        display: block;
+    }
+
+    .perfil i{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+        visibility: visible;
+    }
+
+    /* footer */
+    .footer-top{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
