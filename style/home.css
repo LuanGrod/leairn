@@ -1,32 +1,163 @@
 /* padrão */
+:root{
+    --blue1: #030456;
+    --blue2: #023e8a;
+    --blue3: #0077b6;
+    --blue4: #0096c7;
+    --blue5: #00b4d8;
+    --blue6: #48cae4;
+    --blue7: #90e0ef;
+    --blue8: #ade8f4;
+    --blue9: #caf0f8;
+    --almostBlack: rgb(16, 14, 29);
+    --almostWhite: rgb(248, 249, 251);
+   }
 
-
+body{
+    overflow-x: hidden;
+}
 
 /* header */
-
 /* já esta definido no global.css */
 
 /* conteúdo */
 
 main{
     background-color: darkgrey;
+    width: 100%;
     height: 200vh;
 }
 
-/* footer */
+/* carrossel de imagens */
+.slide{
+    position: relative;
+    width: 100%;
+    height: 32vw;
+    overflow: hidden;
+    background-color: var(--almostWhite);
+}
 
+.slides{
+    display: flex;
+    width: 200%;
+}
+
+.slides .image{
+    position: relative;
+}
+
+.slides .image .content{
+    /* text-align: justify; */
+    position: absolute;
+    width: 350px;
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px #666;
+}
+
+.slides .image .content h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.slides .image #ctt-banner1{
+    top: 70px;
+    left: 100px;
+}
+
+.slides .image #ctt-banner2{
+    top: 70px;
+    right: 160px;
+}
+
+.slides .image img{
+    width: 100%;
+    height: 30vw;
+}
+
+#atual{
+    /* 
+    por que a primeira imagem começa com 0 
+    a segunda começa quando a primeira acaba,
+    ou seja, a margin-left dela é da width
+    */
+    margin-left: 0; 
+    transition: all 2s;
+}
+
+.btn{
+    z-index: 4;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: rgb(236, 232, 232);
+    background-color: rgb(10, 10, 10);
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+#left{
+    top: 50%;
+    left: 2vw;
+}
+
+#right{
+    top: 50%;
+    right: 2vw;
+}
+
+
+/* footer */
 /* já esta definido no global.css */
 
-
+/* responsividade */
 /* tablet */
 @media(max-width:801px){
-   
+    .slides .image .content{
+        width: 260px;
+        padding: 20px;
+    }
+
+    .slides .image #ctt-banner1{
+        position: absolute;
+        top: 45px;
+        left: 80px;
+    }
+    
+    .slides .image #ctt-banner2{
+        position: absolute;
+        top: 45px;
+        right: 80px;
+    }
+
+    .slides .image .content h2, .slides .image .content p{
+        font-size: smaller;
+    }
 }
 
 /* celular */
 @media(max-width:480px){
-  
+
+    .btn{
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
 }
+
 
 /* roda a animação quando interagir com o menu */
 .nav-list.active {

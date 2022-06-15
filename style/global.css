@@ -1,8 +1,17 @@
 /* definir a estilização dos conteúdos que aparecem em todas as páginas (header e footer) */
 /* constantes */
 :root{
-    --corNav:rgb(4, 10, 68);
-    --corFooter: rgb(14, 12, 27);
+    --blue1: #030456;
+    --blue2: #023e8a;
+    --blue3: #0077b6;
+    --blue4: #0096c7;
+    --blue5: #00b4d8;
+    --blue6: #48cae4;
+    --blue7: #90e0ef;
+    --blue8: #ade8f4;
+    --blue9: #caf0f8;
+    --almostBlack: rgb(16, 14, 29);
+    --almostWhite: rgb(248, 249, 251);
    }
 
 /* padrão */
@@ -16,13 +25,16 @@
 /* header */
 
 header nav{
+    z-index: 5;
     position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--corNav);
+    width: 100%;
     height: 10vh;
+    justify-content: space-between;
+    padding: 0 5vw;
+    align-items: center;
+    background: var(--blue1);
+    box-shadow: 0px 3px 12px black;
 }
 
 header .logo{
@@ -46,7 +58,7 @@ header .perfil span{
 }
 
 header a{
-    color: white;
+    color: var(--almostWhite);
     text-decoration: none;
     transition: 0.3s;
 }
@@ -59,50 +71,49 @@ header a:hover{
     .mobile-menu{
         /*display: none;*/
         visibility: hidden;
-        font-size: 24px;
-        color: white;
+        font-size: 25px;
+        color: var(--almostWhite);
         cursor: pointer;
     }
 
 /* footer */
 
 footer{
-    border-top: 1px solid var(--corFooter);
+    border-top: 1px solid var(--almostBlack);
     position: static;
     bottom: 0px;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: var(--almostWhite);
+    color: var(--almostBlack);
 }
 
 footer .footer-top{
     display: flex;
 }
 
-.footer-top .content h2{
+.footer-top h2{
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
 .footer-top .box{
-    flex-basis: 50%;
+    flex-basis: 100%;
     padding: 20px 30px;
     position: relative;
 }
 
-/* Quem somos */
-.left .content{
+.box .content{
     margin-top: 15px;
 }
 
+/* Sobre nós */
 .left .content p{
     text-align: justify;
 }
 
 /* Mais */
 .mid .content ul{
-    margin-top: 15px;
     list-style: none;
 }
 
@@ -111,7 +122,7 @@ footer .footer-top{
 }
 
 .mid .content a{
-    color: black;
+    color: var(--almostBlack);
     text-decoration: none;
 }
 
@@ -153,14 +164,15 @@ footer .footer-top{
 /* Linha do copyright e midias sociais*/
 
 .footer-bot {
-    border-top: 1px var(--corFooter) solid;
+    border-top: 1px var(--almostBlack) solid;
+    margin: 20px 30px 0 30px;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
 }
 
 .footer-bot .content, .footer-bot .social{
-    padding: 20px 30px 0 30px;
+    margin: 20px 30px 0 30px;
 }
 
 .footer-bot .logo{
@@ -183,8 +195,8 @@ footer .footer-top{
     border-radius: 50%;
     font-size: 18px;
     transition: 0.5s;
-    background: var(--corFooter);
-    color: rgb(255, 255, 255);
+    background: var(--almostBlack);
+    color: var(--almostWhite);
 }
 
 .footer-bot .social a i:hover{
@@ -220,14 +232,20 @@ header, main{
     }
 
     /* header */
+
+    header nav{
+        justify-content: space-around;
+    }
+
     .nav-list{
         position: absolute;
         top: 10vh;
         right: 0;
         width: 50vw;
-        height: 50vh;
+        height: 40vh;
+        border-top: 1px solid rgb(0, 12, 116);
         border-bottom-left-radius: 10px;
-        background: var(--corNav);
+        background: var(--blue2);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -258,6 +276,10 @@ header, main{
     .footer-top{
         flex-wrap: wrap;
         flex-direction: column;
+    }
+
+    .footer-bot .logo span{
+        display: none;
     }
 
 }
@@ -280,9 +302,9 @@ header, main{
         top: 10vh;
         right: 0;
         width: 100vw;
-        height: 40vh;
+        height: 30vh;
         border-radius: 0;
-        background: var(--corNav);
+        background: var(--blue1);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -315,6 +337,9 @@ header, main{
         flex-direction: column;
     }
 
+    .footer-bot .logo{
+        display: none;
+    }
 }
 
 .nav-list.active {
