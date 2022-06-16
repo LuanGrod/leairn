@@ -9,32 +9,33 @@
     --blue7: #90e0ef;
     --blue8: #ade8f4;
     --blue9: #caf0f8;
+    --skin1: #f2d6ae;
+    --skin2: #f5b895;
     --almostBlack: rgb(16, 14, 29);
     --almostWhite: rgb(248, 249, 251);
    }
 
 body{
     overflow-x: hidden;
+    background-color: var(--almostWhite);
 }
 
 /* header */
 /* já esta definido no global.css */
 
 /* conteúdo */
-
 main{
-    background-color: darkgrey;
     width: 100%;
-    height: 200vh;
+    /* height: 400vh; */
 }
 
-/* carrossel de imagens */
+/* slider de imagens */
 .slide{
     position: relative;
     width: 100%;
     height: 32vw;
     overflow: hidden;
-    background-color: var(--almostWhite);
+    background-color: var(--blue9);
 }
 
 .slides{
@@ -116,6 +117,161 @@ main{
     top: 50%;
     right: 2vw;
 }
+/* fim do slider */
+
+/* cursos populares */
+/* imagens */
+.populares .itens .item img{
+    display: block;
+    max-width: 100%;
+}
+
+/* fontes */
+.populares h3{
+    margin: 10px auto 5px auto;
+}
+
+.populares a{
+    text-decoration: none;
+    color: var(--almostBlack);
+}
+
+.item .detalhe .star{
+    padding-bottom: 5px;
+}
+
+.item .detalhe span{
+    font-size: 15px;
+}
+
+.populares{
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid rgba(16, 14, 29, 0.219);
+    background: #fff;
+}
+
+/* container principal */
+.populares .itens{
+    background-color: var(--almostWhite);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+  
+.populares .item {
+    flex: 1 1 250px;
+    padding: 15px;
+}
+
+.populares .item:hover{
+    transform: scale(1.05);
+    border-radius: 7px;
+    border: 1px rgba(102, 102, 102, 0.493) solid;
+    background: #fff;
+    box-shadow: 0 0 10px #666;
+    transition: all 0.3s ease-in-out;
+}
+
+.populares h3:hover{
+    text-decoration: underline;
+}
+
+.populares a:visited{
+    color: var(--almostBlack);
+    
+}
+/* fim cursos populares */
+
+/* planos */
+main .content{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-top: 1px solid rgba(16, 14, 29, 0.219);
+    border-bottom: 1px solid rgba(16, 14, 29, 0.219);
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content .coluna{
+    padding: 0 20px;
+}
+
+main .content .left{
+    width: 420px;
+    height: 400px;
+}
+
+main .content .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+main .content .left{
+    text-align: end;
+    letter-spacing: 2px;
+}
+
+main .content .left h1{
+    padding: 5px 15px;
+    letter-spacing: 4px;
+    border-radius: 5px;
+    color: var(--almostWhite);
+    background: var(--blue2);
+}
+
+main .content .left p{
+    margin: 15px 0 20px 0;
+}
+
+main .content .buttom{
+    width: 180px;
+    height: 40px;
+    background: var(--almostBlack);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}
+
+main .content .buttom:hover{
+    transform: scale(1.05);
+}
+
+main .content .buttom:visited{
+    text-decoration: none;
+    color: var(--almostWhite);
+}
+/* fim planos */
+
+/* cursos */
+main .ctt2{
+    display: flex;
+    flex-direction: row;
+}
+
+main .ctt2 .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .ctt2 .left{
+    text-align: start;
+    letter-spacing: 2px;
+}
 
 
 /* footer */
@@ -144,6 +300,24 @@ main{
     .slides .image .content h2, .slides .image .content p{
         font-size: smaller;
     }
+
+    main .content{
+    transform: scale(0.9);
+    flex-direction: column;
+    font-size: large;
+   }
+
+   main .content .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    main .content .buttom{
+        width: 200px;
+    }
 }
 
 /* celular */
@@ -157,7 +331,6 @@ main{
     }
 
 }
-
 
 /* roda a animação quando interagir com o menu */
 .nav-list.active {
