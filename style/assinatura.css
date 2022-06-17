@@ -1,0 +1,36 @@
+/* constantes */
+:root{
+    --blue1: #030456;
+    --blue2: #023e8a;
+    --blue3: #0077b6;
+    --blue4: #0096c7;
+    --blue5: #00b4d8;
+    --blue6: #48cae4;
+    --blue7: #90e0ef;
+    --blue8: #ade8f4;
+    --blue9: #caf0f8;
+    --almostBlack: rgb(16, 14, 29);
+    --almostWhite: rgb(248, 249, 251);
+   }
+
+/* header */
+/* já esta definido no global.css */
+
+/* conteúdo */
+
+
+
+/* footer */
+/* já esta definido no global.css */
+
+/* responsividade */
+/* tablet */
+@media(max-width:801px){
+  
+}
+
+/* celular */
+@media(max-width:480px){
+    
+}
+

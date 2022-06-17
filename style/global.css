@@ -342,6 +342,7 @@ header, main{
     }
 }
 
+/* roda a animação quando interagir com o menu */
 .nav-list.active {
     transform: translateX(0);
 }

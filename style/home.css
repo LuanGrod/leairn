@@ -9,8 +9,6 @@
     --blue7: #90e0ef;
     --blue8: #ade8f4;
     --blue9: #caf0f8;
-    --skin1: #f2d6ae;
-    --skin2: #f5b895;
     --almostBlack: rgb(16, 14, 29);
     --almostWhite: rgb(248, 249, 251);
    }
@@ -26,7 +24,7 @@ body{
 /* conteúdo */
 main{
     width: 100%;
-    /* height: 400vh; */
+    object-fit: cover;
 }
 
 /* slider de imagens */
@@ -187,29 +185,29 @@ main{
 /* fim cursos populares */
 
 /* planos */
-main .content{
+main .content-link{
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
     margin-bottom: 20px;
     padding: 20px;
-    border-top: 1px solid rgba(16, 14, 29, 0.219);
-    border-bottom: 1px solid rgba(16, 14, 29, 0.219);
-    background: #fff;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    ;
     justify-content: center;
     align-items: center;
 }
 
-main .content .coluna{
+main .content-link .coluna{
     padding: 0 20px;
 }
 
-main .content .left{
+main .content-link .left{
     width: 420px;
     height: 400px;
 }
 
-main .content .left{
+main .content-link .left{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -217,12 +215,12 @@ main .content .left{
 }
 
 
-main .content .left{
+main .content-link .left{
     text-align: end;
     letter-spacing: 2px;
 }
 
-main .content .left h1{
+main .content-link .left h1{
     padding: 5px 15px;
     letter-spacing: 4px;
     border-radius: 5px;
@@ -230,11 +228,11 @@ main .content .left h1{
     background: var(--blue2);
 }
 
-main .content .left p{
+main .content-link .left p{
     margin: 15px 0 20px 0;
 }
 
-main .content .buttom{
+main .content-link .buttom{
     width: 180px;
     height: 40px;
     background: var(--almostBlack);
@@ -245,11 +243,11 @@ main .content .buttom{
     transition: 0.2s ease-in;
 }
 
-main .content .buttom:hover{
+main .content-link .buttom:hover{
     transform: scale(1.05);
 }
 
-main .content .buttom:visited{
+main .content-link .buttom:visited{
     text-decoration: none;
     color: var(--almostWhite);
 }
@@ -259,6 +257,7 @@ main .content .buttom:visited{
 main .ctt2{
     display: flex;
     flex-direction: row;
+    ;
 }
 
 main .ctt2 .left{
@@ -272,7 +271,7 @@ main .ctt2 .left{
     text-align: start;
     letter-spacing: 2px;
 }
-
+/* fim cursos */
 
 /* footer */
 /* já esta definido no global.css */
@@ -301,13 +300,13 @@ main .ctt2 .left{
         font-size: smaller;
     }
 
-    main .content{
+    main .content-link{
     transform: scale(0.9);
     flex-direction: column;
     font-size: large;
    }
 
-   main .content .left{
+   main .content-link .left{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,7 +314,7 @@ main .ctt2 .left{
     text-align: center;
     }
 
-    main .content .buttom{
+    main .content-link .buttom{
         width: 200px;
     }
 }
@@ -332,7 +331,3 @@ main .ctt2 .left{
 
 }
 
-/* roda a animação quando interagir com o menu */
-.nav-list.active {
-    transform: translateX(0);
-}
