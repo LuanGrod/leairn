@@ -1,8 +1,14 @@
+// pega o numero de imagens que tem o slider
 let range = document.querySelectorAll('.slides .image');
 let atual = 0;
+// primeira imagem
 let imagem = document.getElementById('atual');
+// botoes
 let left = document.getElementById('left');
 let right = document.getElementById('right');
+// pra permitir que a função seja ativada quando ela estiver rodando
+// basicamente quando ela ta slidando sozinha, se não existir isso
+// ela nn vai permitir 'cancelar' uma rotação clicanco no botao
 let flag = true;
 
 left.addEventListener('click', ()=>{

@@ -17,8 +17,57 @@
 /* já esta definido no global.css */
 
 /* conteúdo */
+main{
+    height: auto;
+    background: var(--almostWhite);
+}
 
+.titulo{
+    padding: 25px 25px 10px 25px;
+}
 
+hr{
+    width: 96%;
+    height:1px;
+    border-width:0;
+    background-color:rgba(128, 128, 128, 0.493);
+    text-align: center;
+    margin: auto;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.coluna{
+    flex: 33%;
+    width: 33%;
+    height: auto;
+    padding: 3% 5%;
+}
+
+.coluna .subtitulo{
+    font-size: 20px;
+}
+
+.coluna li, .coluna li a{
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: none;
+    list-style: none;
+    color: var(--almostBlack);
+}
+
+.coluna li:last-child{
+    padding-bottom: 60px;
+}
+
+.coluna li a:hover{
+    text-decoration: underline;
+}
 
 /* footer */
 /* já esta definido no global.css */
@@ -26,11 +75,22 @@
 /* responsividade */
 /* tablet */
 @media(max-width:801px){
-  
+    .coluna{
+        flex: 100%;
+        width: 100%;
+        height: auto;
+        padding: 3% 5%;
+    }
+
+    .coluna li:last-child{
+        padding-bottom: 10px;
+    }
 }
 
 /* celular */
 @media(max-width:480px){
-    
+    .coluna{
+        padding: 5% 7%;
+    }
 }
 

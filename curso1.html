@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/curso1.css">
     <link rel="stylesheet" href="style/global.css">
-    <title>Document</title>
+    <link rel="icon" href="image/icon.png">
+    <title>LEAIRN - (curso)</title>
 </head>
 <body>
     <header>
@@ -31,8 +32,114 @@
         </nav>
     </header>
 
-    <main>
+    <main >
+        <div class="header-curso">
+            <h2 class="titulo">Manipulação e análise de dados</h2>
+            <div class="classificacao">
+                <i class="star fa-solid fa-star"></i>
+                <i class="star fa-solid fa-star"></i>
+                <i class="star fa-solid fa-star"></i>
+                <i class="star fa-solid fa-star-half-stroke"></i>
+                <i class="star fa-regular fa-star"></i>
+                <span>10 classificações</span>
+            </div>
+        </div>
+        <div class="sub-header-curso">
+            <p>Criado por <a href="#">Luan Rodrigues</a></p>
+            <i class="fa-solid fa-globe"></i>
+            <span>Português</span>
+            <i class="fa-solid fa-closed-captioning"></i>
+            <span>Português</span>
+        </div>
 
+        <div class="descricao-curso">
+            <div class="coluna-video">
+                <video width="360" controls autoplay>
+                    <source src="image/graficos-vid.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <h3>Este curso inclui:</h3>
+                    <div class="desc-item">
+                        <i class="fa-solid fa-tv"></i>
+                        <span>Mais de 40 horas de puro conteúdo</span>
+                    </div>
+                    <div class="desc-item">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>5 projetos práticos</span>
+                    </div>
+                    <div class="desc-item">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>Livre acesso em dispositivos móveis e TV</span>
+                    </div>
+                    <div class="desc-item">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Disponibilidade de download para acesso offline</span>
+                    </div>
+                    <div class="desc-item">
+                        <i class="fa-solid fa-infinity"></i>
+                        <span>Acesso vitalício</span>
+                    </div>
+                    <div class="desc-item">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Certificado ao concluir</span>
+                    </div>
+                    <div class="botoes">
+                        <button id="btn1">Fazer Login</button><br>
+                        <button id="btn2">Cadastre-se</button>
+                    </div>
+                </div>
+            </div>
+            <div class="coluna-desc">
+                <div class="conteudo">
+                    <h2 class="desc-titulo">Este curso abrange</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit atque alias.</li>
+                        <li><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+                <div class="requisitos">
+                    <h2 class="desc-titulo">Requisitos</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-dot"></i> Lorem ipsum dolor sit amet consectetur adipisicing 
+                            elit. Necessitatibus et itaque expedita, ratione architecto cupiditate soluta culpa unde
+                            magnam vero omnis maxime ab eius, recusandae libero praesentium dicta sunt consequatur.</li>
+                    </ul>
+                </div>
+                <div class="desc-completa">
+                    <h2 class="desc-titulo">Descrição do curso</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-circle"></i> Lorem ipsum dolor sit amet consectetur adipisicing 
+                            elit. Necessitatibus et itaque expedita, ratione architecto cupiditate soluta culpa unde
+                            magnam vero omnis maxime ab eius, recusandae libero praesentium dicta sunt consequatur.</li>
+                        <li><i class="fa-solid fa-circle"></i> Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorum corrupti quia velit ipsum, nemo nam qui incidunt esse. Totam fugiat necess
+                            itatibus accusantium quia eligendi, molestiae aut porro a sapiente doloremque!Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda, ab nisi nulla 
+                            voluptatum blanditiis vel tempora dicta laboriosam voluptatibus vero? Recusandae nulla 
+                            nobis, incidunt reprehenderit ea ducimus ut facilis.</li>
+                        <div id="more">
+                            <li><i class="fa-solid fa-circle"></i> Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Dolorum corrupti quia velit ipsum, nemo nam qui incidunt esse. Totam fugiat necess
+                                itatibus accusantium quia eligendi, molestiae aut porro a sapiente doloremque!Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit. </li>
+                            <li><i class="fa-solid fa-circle"></i> Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Dolorum corrupti quia velit ipsum, nemo nam qui incidunt esse. Totam fugiat necess
+                                itatibus accusantium quia eligendi, molestiae aut porro a sapiente doloremque!Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.Recusandae nulla nobis, incidunt reprehenderit
+                                ea ducimus ut facilis. Exercitationem assumenda, ab nisi nulla voluptatum blanditiis vel
+                                tempora dicta laboriosam voluptatibus vero? Recusandae nulla nobis, incidunt reprehenderit
+                                ea ducimus ut facilis quia eligendi, molestiae aut porro.</li>
+                        </div>
+                    </ul>
+                    <button id="btn-mais" onclick="expandir()">Mais</button>
+                </div>
+            </div>
+
+        </div>
+
+
+   
     </main>
 
     <footer>
@@ -108,5 +215,6 @@
     </footer>
     <script src="https://kit.fontawesome.com/22c5bdc4f9.js" crossorigin="anonymous"></script>
     <script src="js/mobile-navbar.js"></script>
+    <script src="js/curso1-leia-mais.js"></script>
 </body>
 </html>

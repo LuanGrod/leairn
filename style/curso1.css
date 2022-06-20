@@ -17,6 +17,161 @@
 /* já esta definido no global.css */
 
 /* conteúdo */
+main{
+    height: auto;
+    background: #fff;
+    font-size: 15px;
+}
+
+/* header do curso */
+.header-curso{
+    z-index: 1;
+    padding: 30px 100px;
+    position: sticky;
+    top: 0;
+    background: var(--almostBlack);
+    color: var(--almostWhite);
+}
+
+.header-curso .titulo{
+    text-transform: uppercase;
+}
+
+.header-curso i{
+    color: gold;
+    padding-top: 10px;
+}
+
+.header-curso span, .sub-header-curso span{
+    padding: 0 10px;
+}
+
+.sub-header-curso{
+    padding: 0 100px;
+    padding-bottom: 50px;
+    background: var(--almostBlack);
+    color: var(--almostWhite);
+}
+
+.sub-header-curso i{
+    padding-top: 10px;
+}
+
+.sub-header-curso a{
+    color: var(--almostWhite);
+    text-decoration: none;
+}
+
+.sub-header-curso a:hover{
+    text-decoration: underline;
+}
+/* fim do header do curso */
+
+/* descricao completa do curso */
+/* esquerda do flex */
+.descricao-curso{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.coluna-desc{
+    width: 50%;
+    flex: 50%;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.coluna-desc .desc-completa #more{
+    display: none;
+}
+
+.coluna-desc .desc-completa #btn-mais{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: rgb(212, 206, 206);
+}
+
+.coluna-desc li{
+    list-style: none;
+    padding-top: 25px;
+}
+
+.coluna-desc li:first-child{
+    padding-top: 10px;
+}
+
+.conteudo, .requisitos, .desc-completa{
+    flex: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    border: 1px solid rgba(102, 102, 102, 0.342);
+    margin-top: 30px;
+    background: #fff;
+}
+/* fim da esquerda da flex */
+
+/* direita da flex */
+.coluna-video{
+    width: 40%;
+    flex-direction: 40%;
+    height: auto;
+}
+
+.coluna-video video{
+    display: block;
+    margin: 30px auto;
+    border: 2px solid var(--almostBlack);
+    border-radius: 2px;
+}
+
+.coluna-video .video-desc{
+    margin: 0 16%;
+}
+
+.coluna-video .video-desc .desc-item{
+    padding-top: 18px;
+    font-size: 14px;
+}
+
+.coluna-video .video-desc .botoes{
+    padding: 10px 15%;
+}
+
+.coluna-video .video-desc .botoes button{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.coluna-video .video-desc .botoes #btn1{
+    background: var(--almostWhite);
+}
+
+.coluna-video .video-desc .botoes #btn2{
+    color: var(--almostWhite);
+    background: var(--almostBlack);
+}
+/* fim da direita da flex */
+/* fim da descricao completa do curso */
+
+
 
 
 
@@ -26,7 +181,14 @@
 /* responsividade */
 /* tablet */
 @media(max-width:801px){
-  
+    .descricao-curso{
+        width: 90%;
+        margin: auto;
+    }
+
+    .conteudo, .requisitos, .desc-completa{
+        margin-top: 30px;
+    }
 }
 
 /* celular */
