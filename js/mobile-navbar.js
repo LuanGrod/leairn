@@ -1,6 +1,3 @@
-// classes
-// icone: mobile-menu
-// lista: nav-list
 class MobileNavBar{
     constructor(mobileMenu, navList, navLinks){
         this.mobileMenu = document.querySelector(mobileMenu);

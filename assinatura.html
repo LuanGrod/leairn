@@ -73,7 +73,7 @@
 
 
     </main>
-
+ 
     <footer>
         <div class="footer-top">
 
@@ -81,11 +81,11 @@
                 <h2>Sobre nós</h2>
                 <hr>
                 <div class="content">
-                    <p>Minim do ipsum velit esse velit id dolor aliquip aute consequat. 
-                       Velit labore eu labore aliquip proident laborum nostrud consectetur occaecat.
-                       Nostrud ad ex dolore reprehenderit nulla. Pariatur ut ipsum commodo aliquip aute
-                       esse tempor. Eiusmod laborum id sunt ullamco. Laboris ullamco officia consectetur
-                       mollit.</p>
+                    <p>A LEARN é um marketplace voltado ao aprendizado na área de tecnologia e inovação.</p>
+                    <p>Oferemos cursos nas mais diversas áreas da tecnologia para aprofundar o conhecimento 
+                       de todos aqueles que desejam entrar no mundo Dev. A LEARN proporciona ao profissional 
+                       o conhecimento que ele precisa nos dias de hoje para ter uma carreira de sucesso.</p>
+                    <p>Junte-se a LEARN já!</p>
                 </div>
             </div>
 
@@ -110,17 +110,17 @@
                 <h2>Contato</h2>
                 <hr>
                 <div class="content">
-                    <form action="#">
+                    <form action="#" name="formulario">
                         <div class="email">
                             <p>Email *</p>
-                            <input type="email" required>
+                            <input type="email" name="email" autocomplete="off" equired>
                         </div>
                         <div class="msg">
                             <p>Mensagem *</p>
-                            <textarea name="msg" id="tf-msg" cols="30" rows="6" required></textarea>
+                            <textarea name="msg" id="tf-msg" cols="30" rows="6" autocomplete="off" required></textarea>
                         </div>
                         <div class="bttm">
-                            <input type="submit" value="Enviar">
+                            <input type="submit" onclick="validaForm(formulario.email, formulario.msg)" value="Enviar">
                         </div>
                     </form>
                 </div>
@@ -130,11 +130,11 @@
         <div class="footer-bot">
             <div class="content">
                 <span>
-                    <i class="fa-regular fa-copyright"></i> LEAIRN Inc. Todos os direitos reservados.
+                    <i class="fa-regular fa-copyright"></i>LEAIRN Inc. Todos os direitos reservados.
                 </span>
             </div>
             <div class="logo">
-                <i class="fa-solid fa-microchip"></i><small>le</small>ai<small>rn</small>
+                <i class="fa-solid fa-microchip"></i> <span><small>le</small>ai<small>rn</small></span> 
             </div>
             <div class="social">
                 <a href="#"><span><i class="fa-brands fa-youtube"></i></span></a>
@@ -145,7 +145,9 @@
             </div>
         </div>
     </footer>
+
     <script src="https://kit.fontawesome.com/22c5bdc4f9.js" crossorigin="anonymous"></script>
     <script src="js/mobile-navbar.js"></script>
+    <script src="js/valida-form.js"></script>
 </body>
 </html>

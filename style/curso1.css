@@ -122,7 +122,7 @@ main{
 /* direita da flex */
 .coluna-video{
     width: 40%;
-    flex-direction: 40%;
+    flex: 40%;
     height: auto;
 }
 
@@ -181,18 +181,40 @@ main{
 /* responsividade */
 /* tablet */
 @media(max-width:801px){
-    .descricao-curso{
-        width: 90%;
-        margin: auto;
+    .header-curso{
+        position: static;
+        padding: 30px 50px;
+    }
+
+    .sub-header-curso{
+        padding: 0 50px 30px;
+    }
+
+    .coluna-desc{
+        width: 100%;
+        flex: 100%;
+        margin: 30px 10px;
     }
 
     .conteudo, .requisitos, .desc-completa{
         margin-top: 30px;
     }
+
+    .coluna-video{
+        width: 100%;
+        flex: 100%;
+        height: auto;
+    }
+
+    .coluna-video video{
+        width: 600px;
+    }
 }
 
 /* celular */
 @media(max-width:480px){
-    
+    .coluna-video video{
+        width: 100%;
+    }
 }
 
