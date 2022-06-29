@@ -201,6 +201,10 @@ main .content-link .coluna{
     padding: 0 20px;
 }
 
+main .content-link a{
+    color: var(--almostWhite);
+}
+
 main .content-link .left{
     width: 420px;
     height: 400px;
