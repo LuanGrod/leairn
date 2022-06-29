@@ -4,7 +4,7 @@ function validaForm(email, mensagem) {
     if (validaEmail(email)) {
         flag++;
     } else{
-        alert("O e-mail deve pertencer ao domínio '@learn.com'\neg: <usuario>@learn.com");
+        alert("O e-mail deve pertencer ao domínio '@leairn.com'\neg: <usuario>@leairn.com");
     }
 
     if (validaMsg(mensagem)) {
@@ -25,7 +25,7 @@ function validaEmail(email) {
     (usuario.length >=1) && //usuario tem que ter mais de 1 caractere, não pode ter @ nem ' '
     (usuario.search("@")==-1) && 
     (usuario.search(" ")==-1) && 
-    (dominio == "learn.com") //dominio tem que ter igual a 'learn.com'
+    (dominio == "leairn.com") //dominio tem que ter igual a 'learn.com'
     ){
         return true;
     } else {
