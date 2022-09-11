@@ -11,13 +11,11 @@ A proposta do projeto foi de fazer um site de domínio de negócio livre com nav
 
 # Layout da aplicação
 ### Desktop
-![Desktop]()
+![Desktop](https://github.com/LuanGrod/leairn/blob/main/image/screenshots/desktop.png)
 ### Tablet (801px)
-![Mobile1]()
+![Mobile1](https://github.com/LuanGrod/leairn/blob/main/image/screenshots/mobile1.png)
 ### Celular (480px)
-![Mobile1]()
-
-[Utilização do sistema](https://drive.google.com/file/d/1k1OdL_4PCA9hnKTHmnArZj5T1k7o-j09/view)
+![Mobile1](https://github.com/LuanGrod/leairn/blob/main/image/screenshots/mobile2.png)
 
 # Ferramentas e Tecnologias
 - HTML5
